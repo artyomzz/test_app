@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from src.questions.router import router as questions_router
+
+app = FastAPI(title="Test app")
+app.include_router(
+    questions_router,
+)
 
 
 @app.get("/index")
