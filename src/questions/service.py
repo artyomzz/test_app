@@ -18,10 +18,7 @@ async def fetch_questions(
     return [Question(**item) for item in resp_json]
 
 
-async def save_questions_to_db(
-        session: AsyncSession,
-        questions: list[Question]
-) -> int:
+async def save_questions_to_db(session: AsyncSession, questions: list[Question]) -> int:
     insert_stmt = insert(QuestionModel).values(
         [question.dict() for question in questions]
     )

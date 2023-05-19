@@ -12,3 +12,4 @@ DB_NAME = os.getenv("DB_NAME")
 
 
 QUESTIONS_URL = "https://jservice.io/api/random?count={}"
+CHUNK_SIZE = 1024 * 1024 * 5  # 5 megabytes

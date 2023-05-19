@@ -11,3 +11,7 @@ class UserCreateOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class RecordCreateOut(BaseModel):
+    url: str
