@@ -80,8 +80,8 @@ async def upload_record(
                 session=session,
             )
             return RecordCreateOut(
-                url="http://{}:8000/record?id={}&user_id={}".format(
-                    request.client.host, record.id, user_id
+                url="http://0.0.0.0:8000/record?id={}&user_id={}".format(
+                    record.id, user_id
                 )
             )
     except IntegrityError as e:
