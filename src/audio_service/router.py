@@ -80,7 +80,7 @@ async def upload_record(
                 session=session,
             )
             return RecordCreateOut(
-                url="http://0.0.0.0:8000/record?id={}&user_id={}".format(
+                url="http://localhost:8000/record?id={}&user_id={}".format(
                     record.id, user_id
                 )
             )

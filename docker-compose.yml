@@ -21,7 +21,7 @@ services:
     env_file:
       - .env-prod
     container_name: app
-    command: [ "scripts/run.sh" ]
+    command: [ "/bin/bash", "scripts/run.sh" ]
     ports:
       - "8000:8000"
     depends_on:
